@@ -1,1 +1,1 @@
-web: python randomizer.py
+web: python3 randomizer.py
