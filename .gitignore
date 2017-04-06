@@ -1,3 +1,4 @@
 # Ignore secrets file
 
 __pycache__/
+secrets.py
