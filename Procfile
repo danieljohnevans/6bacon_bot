@@ -1,1 +1,1 @@
-worker: python3 randomizer.py
+worker: python randomizer.py

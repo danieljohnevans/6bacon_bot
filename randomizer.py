@@ -3,17 +3,13 @@
 #twitter bot rewritten in Python
 
 
+from secrets import *
 from random import randint, choice
 import json
 from urllib.request import urlopen
 from urllib.error import HTTPError
 from json.decoder import JSONDecodeError
 import tweepy
-
-CONSUMER_KEY          = "8VZQBLdmRXTiQQTNEfdqtTqIe"
-CONSUMER_SECRET       = "anPXzjrK0N3L24NXO0TgS0ER4fujYzc3O6ACfXz7BqRgmf3uQZ"
-ACCESS_TOKEN         = "727875481253588992-jViKSFJB4ANZizbKqUH89D4BAtemvYZ"
-ACCESS_TOKEN_SECRET   = "IOZIIS7xxXJK5WKzEmHMcH1wBPmr9GCVlAZm4JxySKF3j"
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
