@@ -107,5 +107,5 @@ if coinflip == 0:
 else:
     tweet = compose_person_tweet()
 
-# api.update_status(tweet)
-print(tweet)
+api.update_status(tweet)
+# print(tweet)
