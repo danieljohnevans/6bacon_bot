@@ -11,11 +11,6 @@ from urllib.error import HTTPError
 from json.decoder import JSONDecodeError
 import tweepy
 
-CONSUMER_KEY          = 'dipDzaYJ7YrT3tDvlWrDb9rnw'
-CONSUMER_SECRET       = 'V0BY1YJKqB3yPVfjqaWE14udat1g6VFrxMwn1ad3vNK5FqFccY'
-ACCESS_TOKEN         = '727875481253588992-2UiAnreInDMv44lt9DPXIYySEQQ4SaP'
-ACCESS_TOKEN_SECRET   = 'v8ngSY2S7d4GkqSGSxoriC0GbYI4SYsYGF7E1i2weI9vn'
-
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
