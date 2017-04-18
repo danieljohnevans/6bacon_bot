@@ -64,7 +64,7 @@ def compose_rel_tweet():
     person1_name = get_person_name(person1_id)
     person2_id = data['person2_index']
     person2_name = get_person_name(person2_id)
-    tweet = "The 6Bacon network has a {0}% certainty that {1} {2} {3}. See their shared network: http://sixdegreesoffrancisbacon.com/?id={4}&id2={5}&confidence={0},100&date=1500,1700&table=no".format(conf, person1_name, reltype, person2_name, person1_id, person2_id)
+    tweet = "The 6Bacon network has a {0}% certainty that {1} {2} {3}. See their shared network: http://sixdegreesoffrancisbacon.com/?id={4}&id2={5}&confidence=60,100&date=1500,1700&table=no".format(conf, person1_name, reltype, person2_name, person1_id, person2_id)
     return tweet
 
 def compose_person_tweet():
