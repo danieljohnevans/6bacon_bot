@@ -64,7 +64,7 @@ def compose_rel_tweet():
     person1_name = get_person_name(person1_id)
     person2_id = data['person2_index']
     person2_name = get_person_name(person2_id)
-    tweet = "6Bacon is {0}% certain that {1} {2} {3}. See their shared network: http://sixdegreesoffrancisbacon.com/?id={4}&id2={5}&confidence={0},100&date=1500,1700&table=no".format(conf, person1_name, reltype, person2_name, person1_id, person2_id)
+    tweet = "The 6Bacon network has a {0}% certainty that {1} {2} {3}. See their shared network: http://sixdegreesoffrancisbacon.com/?id={4}&id2={5}&confidence={0},100&date=1500,1700&table=no".format(conf, person1_name, reltype, person2_name, person1_id, person2_id)
     return tweet
 
 def compose_person_tweet():
@@ -83,8 +83,11 @@ def compose_person_tweet():
     birthyear = data['ext_birth_year']
     deathtype = parse_year_type(data['death_year_type'])
     deathyear = data['ext_death_year']
-    hist_sig = data['historical_significance'].strip()
-    tweet = "{0}, {1}, was born {2} {3} and died {4} {5}. See the network: http://sixdegreesoffrancisbacon.com/people/{6}".format(name, hist_sig, birthtype, birthyear, deathtype, deathyear, id)
+    if data['historical_significance']:
+        hist_sig = data['historical_significance'].strip()
+        tweet = "{0}, {1}, was born {2} {3} and died {4} {5}. See the network: http://sixdegreesoffrancisbacon.com/?id={6}&confidence=60,100&date=1500,1700".format(name, hist_sig, birthtype, birthyear, deathtype, deathyear, id)
+    else:
+        tweet = "{0} was born {2} {3} and died {4} {5}. See the network: http://sixdegreesoffrancisbacon.com/?id={6}&confidence=60,100&date=1500,1700".format(name, birthtype, birthyear, deathtype, deathyear, id)
     return tweet
 
 def parse_year_type(ytype):
