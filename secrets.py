@@ -1,6 +1,0 @@
-#twitter bot rewritten in Python
-
-CONSUMER_KEY          = 'dipDzaYJ7YrT3tDvlWrDb9rnw'
-CONSUMER_SECRET       = 'V0BY1YJKqB3yPVfjqaWE14udat1g6VFrxMwn1ad3vNK5FqFccY'
-ACCESS_TOKEN         = '727875481253588992-2UiAnreInDMv44lt9DPXIYySEQQ4SaP'
-ACCESS_TOKEN_SECRET   = 'v8ngSY2S7d4GkqSGSxoriC0GbYI4SYsYGF7E1i2weI9vn'
